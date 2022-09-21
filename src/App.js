@@ -36,6 +36,8 @@ function App() {
           <div id="glip-wallet"></div>
           <header className="App-header">
             <button onClick={() => wallet.showConnectModal(['google'])}>Show Modal</button>
+            <button onClick={() => wallet.login(
+                'google', window.location.href)}>Google Login</button>
             <button onClick={async () => {
                 const loggedOut = await wallet.logout();
                 console.log('loggedOut', loggedOut);
